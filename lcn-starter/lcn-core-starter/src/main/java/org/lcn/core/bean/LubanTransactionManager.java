@@ -54,7 +54,7 @@ public class LubanTransactionManager {
 		jsonObject.put("isEnd", isEnd);
 		jsonObject.put("transactionCount", addThreadLocaltransactionCount());
 		jsonObject.put("command", "add");
-		log.info("添加事务---------->"+nettyClient);
+		log.info("添加事务---------->"+JSONObject.toJSONString(jsonObject));
 		nettyClient.send(jsonObject);
 		return lubanTransaction;
 	}
