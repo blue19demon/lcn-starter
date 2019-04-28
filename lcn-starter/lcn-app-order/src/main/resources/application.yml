@@ -28,5 +28,5 @@ spring:
  
 lcn:
   manager:
-    server: 172.18.58.57
+    server: 192.168.41.2
     port: 9090

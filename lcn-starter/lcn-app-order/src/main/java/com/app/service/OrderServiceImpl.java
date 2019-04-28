@@ -23,6 +23,6 @@ public class OrderServiceImpl implements OrderService {
 	public void insert(Order record) {
 		httpClient.get("http://127.0.0.1:8092/add?name=aaa");
 		orderMapper.insert(record);
-		System.out.println(1/0);
+		//System.out.println(1/0);
 	}
 }
