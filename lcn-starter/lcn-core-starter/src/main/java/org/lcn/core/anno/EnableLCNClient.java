@@ -8,14 +8,14 @@ import java.lang.annotation.Target;
 
 import org.lcn.core.core.ApplicationConfig;
 import org.lcn.core.core.HttpClient;
-import org.lcn.core.core.LubanDatasourceAspect;
-import org.lcn.core.core.LubanTransactionalAspect;
+import org.lcn.core.core.LCNDatasourceAspect;
+import org.lcn.core.core.LCNTransactionalAspect;
 import org.lcn.core.core.NettyClientHandler;
 import org.lcn.core.interceptor.InterceptorConfig;
 import org.lcn.core.interceptor.RequestInterceptor;
 import org.springframework.context.annotation.Import;
 
-@Import({ ApplicationConfig.class, HttpClient.class, LubanDatasourceAspect.class, LubanTransactionalAspect.class,
+@Import({ ApplicationConfig.class, HttpClient.class, LCNDatasourceAspect.class, LCNTransactionalAspect.class,
 		 ApplicationConfig.class, NettyClientHandler.class, InterceptorConfig.class,
 		RequestInterceptor.class,NettyClientHandler.class})
 @Target({ ElementType.TYPE })

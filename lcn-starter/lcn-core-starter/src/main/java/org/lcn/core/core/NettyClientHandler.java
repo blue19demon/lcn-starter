@@ -1,6 +1,6 @@
 package org.lcn.core.core;
-import org.lcn.core.bean.LubanTransaction;
-import org.lcn.core.bean.LubanTransactionManager;
+import org.lcn.core.bean.LCNTransaction;
+import org.lcn.core.bean.LCNTransactionManager;
 import org.lcn.core.bean.TransactionType;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +27,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 		String command = jsonObject.getString("command");// create 创建事务组 add 添加事务组
 		String groupId = jsonObject.getString("groupId");// 事务组id
 		log.info("接受到command="+command);
-		LubanTransaction lubanTransaction=LubanTransactionManager.getTxLubanTransaction(groupId);
+		LCNTransaction lubanTransaction=LCNTransactionManager.getTxLcnTransaction(groupId);
 		if(command.equals("commit")) {
 			lubanTransaction.setTransactionType(TransactionType.commit);
 		}else {

@@ -11,5 +11,6 @@
   	<module>lcn-app-order</module>
     <module>lcn-app-product</module>
     <module>lcn-man</module>
+    <module>lcn-app-user</module>
   </modules>
 </project>

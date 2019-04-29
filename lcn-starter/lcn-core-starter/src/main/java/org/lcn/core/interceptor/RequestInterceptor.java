@@ -3,7 +3,7 @@ package org.lcn.core.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.lcn.core.bean.LubanTransactionManager;
+import org.lcn.core.bean.LCNTransactionManager;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,8 +15,8 @@ public class RequestInterceptor implements HandlerInterceptor {
 			throws Exception {
 		String groupId = request.getHeader("groupId");
 		String transactionCount = request.getHeader("transactionCount");
-		LubanTransactionManager.setThreadLocalGroupId(groupId);
-		LubanTransactionManager.setThreadLocaltransactionCount(Integer.parseInt(transactionCount==null?"0":transactionCount));
+		LCNTransactionManager.setThreadLocalGroupId(groupId);
+		LCNTransactionManager.setThreadLocaltransactionCount(Integer.parseInt(transactionCount==null?"0":transactionCount));
 		return true;
 	}
 

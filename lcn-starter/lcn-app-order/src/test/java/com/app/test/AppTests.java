@@ -1,7 +1,6 @@
 package com.app.test;
 
 import java.math.BigDecimal;
-import java.util.Scanner;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,9 +21,8 @@ public class AppTests {
 
 	@Test
 	public void test() {
-		Order order = Order.builder().name("淘宝订单").remark("衣物").price(new BigDecimal(199)).build();
+		Order order = Order.builder().name("京东订单").remark("手机壳").price(new BigDecimal(199)).build();
 		orderService.insert(order);
-		//new Scanner(System.in).next();
 	}
 
 }

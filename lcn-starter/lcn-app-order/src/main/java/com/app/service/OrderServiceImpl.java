@@ -1,6 +1,6 @@
 package com.app.service;
 
-import org.lcn.core.anno.LubanTransactional;
+import org.lcn.core.anno.LCNTransactional;
 import org.lcn.core.core.HttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,10 +19,10 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	@Transactional
-	@LubanTransactional(isStart=true)
+	@LCNTransactional(isStart=true)
 	public void insert(Order record) {
-		httpClient.get("http://127.0.0.1:8092/add?name=aaa");
+		httpClient.get("http://127.0.0.1:8092/add?name=手机");
 		orderMapper.insert(record);
-		//System.out.println(1/0);
+		System.out.println(1/0);
 	}
 }
