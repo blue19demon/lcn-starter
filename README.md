@@ -34,7 +34,7 @@
           SpringApplication.run(AppOrderApplication.class, args);
         }
       }
-#### 在service层方法上加注解@LubanTransactional(isStart=true)如
+#### 在service层方法上加注解@LCNTransactional(isStart=true)如
       @Autowired
       private HttpClient httpClient;//这里的HttpClient只能使用lcn-core-starter里面的
       @Override
@@ -76,7 +76,7 @@
           SpringApplication.run(AppProductApplication.class, args);
         }
       }
-  ##### 在service层方法上加注解@LubanTransactional(isEnd=true)如
+  ##### 在service层方法上加注解@LCNTransactional(isEnd=true)如
       @Override
       @Transactional
       @LCNTransactional(isEnd=true)
