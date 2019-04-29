@@ -22,9 +22,9 @@
         }
     }
  ##### application.yml上下文配置文件中新增如下内容，配置tx-manager信息（目前版本只支持放在classpath路径下的文件名一致的文件）
-        lcn:
-      manager:
-        port: 9090
+	lcn:
+	  manager:
+	    port: 9090
 #### 3.2  lcn-app-order事务发起方，首先主启动类添加注解@EnableLCNClient和@EnableAspectJAutoProxy，如
       @SpringBootApplication
       @EnableAspectJAutoProxy
