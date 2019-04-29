@@ -39,7 +39,7 @@
       private HttpClient httpClient;//这里的HttpClient只能使用lcn-core-starter里面的
       @Override
       @Transactional
-      @LubanTransactional(isStart=true)
+      @LCNTransactional(isStart=true)
       public void insert(Order record) {
         httpClient.get("http://127.0.0.1:8092/add?name=aaa");
         orderMapper.insert(record);
@@ -79,7 +79,7 @@
   ##### 在service层方法上加注解@LubanTransactional(isEnd=true)如
       @Override
       @Transactional
-      @LubanTransactional(isEnd=true)
+      @LCNTransactional(isEnd=true)
       public void insert(Product record) {
         productMapper.insert(record);
       }
