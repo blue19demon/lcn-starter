@@ -9,7 +9,7 @@
 #### 步骤2. lcn-app-order,lcn-app-product添加依赖项
     <dependency>
         <groupId>org.lcn</groupId>
-        <artifactId>lcn-manager-starter</artifactId>
+        <artifactId>lcn-core-starter</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </dependency>
 #### 步骤3.项目中的使用
