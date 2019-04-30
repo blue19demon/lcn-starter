@@ -19,5 +19,6 @@ public class UserServiceImpl implements UserService {
 	@LCNTransactional(isEnd=true)
 	public void insert(User record) {
 		productMapper.insert(record);
+		System.out.println(1/0);
 	}
 }

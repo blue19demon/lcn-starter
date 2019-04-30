@@ -21,8 +21,11 @@ public class AppTests {
 
 	@Test
 	public void test() {
-		Order order = Order.builder().name("京东订单").remark("手机壳").price(new BigDecimal(199)).build();
-		orderService.insert(order);
+		for (int i = 1; i <=10; i++) {
+			Order order = Order.builder().name("京东订单").remark("手机壳").price(new BigDecimal(199)).build();
+			orderService.insert(order);
+		}
+		
 	}
 
 }
