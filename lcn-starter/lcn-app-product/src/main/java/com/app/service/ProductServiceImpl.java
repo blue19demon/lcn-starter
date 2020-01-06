@@ -22,5 +22,6 @@ public class ProductServiceImpl implements ProductService {
 	public void insert(Product record) {
 		httpClient.get("http://127.0.0.1:8093/add?name=哟个人");
 		productMapper.insert(record);
+		//System.out.println(1/0);
 	}
 }

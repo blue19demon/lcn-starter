@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: server-product
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: huangjian
+Built-By: Administrator
 Implementation-Vendor-Id: org.lcn
-Build-Jdk: 1.8.0_131
+Build-Jdk: 1.8.0_77
 Implementation-URL: http://projects.spring.io/spring-boot/lcn-app-orde
  r/
 Created-By: Maven Integration for Eclipse

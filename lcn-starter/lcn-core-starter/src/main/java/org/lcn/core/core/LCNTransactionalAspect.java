@@ -38,9 +38,6 @@ public class LCNTransactionalAspect implements Ordered{
 		 try {
 			point.proceed();
 			LCNTransactionManager.addLcnTransaction(lubanTransaction, lubanTransactional.isEnd(), TransactionType.commit);
-		} catch (Exception e) {
-			LCNTransactionManager.addLcnTransaction(lubanTransaction, lubanTransactional.isEnd(), TransactionType.rollback);
-			e.printStackTrace();
 		} catch (Throwable e) {
 			LCNTransactionManager.addLcnTransaction(lubanTransaction, lubanTransactional.isEnd(), TransactionType.rollback);
 			e.printStackTrace();

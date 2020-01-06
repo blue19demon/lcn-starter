@@ -15,6 +15,7 @@ public class RequestInterceptor implements HandlerInterceptor {
 			throws Exception {
 		String groupId = request.getHeader("groupId");
 		String transactionCount = request.getHeader("transactionCount");
+		System.out.println("当前第"+transactionCount+"个了");
 		LCNTransactionManager.setThreadLocalGroupId(groupId);
 		LCNTransactionManager.setThreadLocaltransactionCount(Integer.parseInt(transactionCount==null?"0":transactionCount));
 		return true;

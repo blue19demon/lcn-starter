@@ -8,7 +8,7 @@ spring:
         name: test
         url: jdbc:mysql://127.0.0.1:3306/tk_mysql03?useUnicode=true&characterEncoding=utf8
         username: root
-        password: 123456
+        password: root
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
@@ -27,5 +27,5 @@ spring:
         maxOpenPreparedStatements: 20
 lcn:
   manager:
-    server: 172.18.58.57
+    server: 172.18.56.153
     port: 9090

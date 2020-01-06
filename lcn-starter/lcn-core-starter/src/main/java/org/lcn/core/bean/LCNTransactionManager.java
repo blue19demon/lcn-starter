@@ -82,7 +82,7 @@ public class LCNTransactionManager {
 	public static Integer addThreadLocaltransactionCount() {
 		Integer counter = threadLocaltransactionCount.get() == null ? 0 : threadLocaltransactionCount.get() + 1;
 		threadLocaltransactionCount.set(counter);
-		return 3;
+		return 3;//threadLocaltransactionCount.get();
 	}
 
 }
